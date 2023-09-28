@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список дисциплин и оценок</title>
+</head>
+<body>
+    <h1>Список дисциплин и оценок</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Дисциплина</th>
+                <th>Оценка</th>
+            </tr>
+        </thead>
+        <tbody id="grades-table">
+            <!-- This is where the entered disciplines and grades will be displayed -->
+        </tbody>
+    </table>
+    <h2>Добавить дисциплину и оценку</h2>
+    <form id="add-form" method="POST">
+        <label for="discipline">Дисциплина:</label>
+        <input type="text" name="discipline" required><br>
+        <label for="grade">Оценка:</label>
+        <input type="number" name="grade" min="1" max="5" required><br>
+        <input type="submit" value="Добавить">
+    </form>
+
+    <!-- JavaScript to handle form submission and table update -->
+    <script>
+        document.getElementById('add-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const disciplineInput = this.querySelector('input[name="discipline"]');
+            const gradeInput = this.querySelector('input[name="grade"]');
+            const discipline = disciplineInput.value;
+            const grade = gradeInput.value;
+
+            // Validate the grade
+            if (grade < 1 || grade > 5) {
+                alert("Оценка должна быть в диапазоне от 1 до 5");
+                return;
+            }
+
+            // Add the discipline and grade to the table
+            const table = document.getElementById('grades-table');
+            const newRow = table.insertRow(-1);
+            const disciplineCell = newRow.insertCell(0);
+            const gradeCell = newRow.insertCell(1);
+            disciplineCell.innerHTML = discipline;
+            gradeCell.innerHTML = grade;
+
+            // Clear the form inputs
+            disciplineInput.value = '';
+            gradeInput.value = '';
+        });
+    </script>
+</body>
+</html>
