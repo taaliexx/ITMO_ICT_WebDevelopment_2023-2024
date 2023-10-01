@@ -1,5 +1,5 @@
 site_name: Web-программирование
-site_description: Лабораторные работы по курсу Web-программирование
+site_description: Лабораторные работы по предмету Web-программирование
 site_author: Наталья Афонина
 repo_url: https://github.com/taaliexx/ITMO_ICT_WebDevelopment_2023-2024
 edit_uri: ""
@@ -13,7 +13,7 @@ theme:
     - header.autohide
 
 nav:
-  - 'Главная страница': 'home.md'
+  - 'Главная страница': 'index.md'
   - 'Лабораторная работа №1':
     - 'Задание №1': 'lab1_task1.md'
     - 'Задание №2': 'lab1_task2.md'

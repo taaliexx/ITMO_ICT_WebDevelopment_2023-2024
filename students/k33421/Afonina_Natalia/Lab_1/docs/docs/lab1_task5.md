@@ -184,6 +184,87 @@ if __name__ == '__main__':
 <html>
 <head>
     <title>Список дисциплин и оценок</title>
+    <style>
+    body {
+        background-color: #F4F4F4;
+        font-family: Montserrat, sans-serif;
+        text-align: center; /* Выровнять текст по центру */
+        margin: 0; /* Убрать отступы по умолчанию */
+        padding: 0; /* Убрать внутренние отступы по умолчанию */
+    }
+    h1 {
+        font-family: Montserrat, sans-serif;
+        font-size: 36px;
+        color: #3F3460;
+    }
+
+    h2 {
+    color: #3F3460;
+    }
+
+    table {
+    font-family: Montserrat, sans-serif;
+    margin: 0 auto; /* Центрировать таблицу по горизонтали */
+    width: 80%; /* Установить ширину таблицы на 80% ширины контейнера */
+    border-collapse: collapse; /* Свернуть границы ячеек таблицы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавить тень для таблицы */
+    background-color: #F4F4F4;; /* Фон таблицы */
+    border-radius: 5px; /* Закруглить углы таблицы */
+    }
+
+    table th,
+    table td {
+        padding: 10px; /* Добавить отступы для содержимого ячеек */
+        text-align: center; /* Выровнять текст по центру ячеек */
+        border: 1px solid #ccc; /* Добавить рамку вокруг ячеек */
+        background-color: #F4F4F4; /* Фон ячеек таблицы */
+        color: #3F3460;
+    }
+
+    table th {
+        background-color: #3F3460; /* Фон заголовков таблицы */
+        color: #F4F4F4;
+    }
+
+
+    form {
+        font-family: Montserrat, sans-serif;
+        text-align: left; /* Выровнять форму слева */
+        max-width: 400px; /* Установить максимальную ширину формы */
+        margin: 0 auto; /* Центрировать форму по горизонтали */
+        padding: 20px; /* Добавить немного отступов для стиля */
+        border: 1px solid #ccc; /* Добавить рамку для формы */
+        background-color: #fff; /* Фон формы */
+        border-radius: 5px; /* Закруглить углы формы */
+        color: #3F3460
+    }
+    form label {
+        font-family: Montserrat, sans-serif;
+        display: block; /* Разместить метки на новой строке */
+        margin-bottom: 10px; /* Отступ между метками */
+        font-weight: bold; /* Усилить текст меток */
+    }
+    form input[type="text"],
+    form input[type="number"] {
+        font-family: Montserrat, sans-serif;
+        color: #3F3460;
+        width: 100%; /* Заполнить всю доступную ширину */
+        padding: 10px 0%; /* Добавить отступы для текстовых полей */
+        margin-bottom: 15px; /* Отступ между текстовыми полями */
+        border: 1px solid #3F3460; /* Добавить рамку вокруг текстовых полей */
+        border-radius: 3px; /* Закруглить углы текстовых полей */
+    }
+
+    form input[type="submit"] {
+        font-family: Montserrat, sans-serif;
+        background-color: #3F3460; /* Цвет кнопки */
+        color: #F4F4F4; /* Цвет текста кнопки */
+        padding: 10px 20px; /* Отступы внутри кнопки */
+        border: none; /* Убрать границу кнопки */
+        border-radius: 3px; /* Закруглить углы кнопки */
+        cursor: pointer; /* Изменить курсор при наведении на кнопку */
+    }
+    </style>
 </head>
 <body>
     <h1>Список дисциплин и оценок</h1>
@@ -237,21 +318,12 @@ if __name__ == '__main__':
     </script>
 </body>
 </html>
-```
 
-**not_found.html**
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Страница не найдена</title>
-</head>
-<body>
-    <h1>Страница не найдена</h1>
-    <p>Запрашиваемая страница не существует.</p>
-</body>
-</html>
 ```
 ![Страница](task5.png)
 
 *Веб-страница с информацией о дисциплине и оценках по ней*
+
+![Страница_2](task5_404.png)
+
+*Веб-страница не найдена*
