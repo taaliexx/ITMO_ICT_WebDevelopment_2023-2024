@@ -121,13 +121,30 @@
                 return;
             }
 
-            // Add the discipline and grade to the table
+                // Check if the discipline already exists in the table
+            let existingRow = null;
             const table = document.getElementById('grades-table');
-            const newRow = table.insertRow(-1);
-            const disciplineCell = newRow.insertCell(0);
-            const gradeCell = newRow.insertCell(1);
-            disciplineCell.innerHTML = discipline;
-            gradeCell.innerHTML = grade;
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                const cell = row.cells[0];
+                if (cell.innerHTML === discipline) {
+                    existingRow = row;
+                    break;
+                }
+            }
+
+            if (existingRow) {
+                // If the discipline already exists, append the grade with a comma
+                const gradeCell = existingRow.cells[1];
+                gradeCell.innerHTML += `, ${grade}`;
+            } else {
+                // If the discipline doesn't exist, add a new row
+                const newRow = table.insertRow(-1);
+                const disciplineCell = newRow.insertCell(0);
+                const gradeCell = newRow.insertCell(1);
+                disciplineCell.innerHTML = discipline;
+                gradeCell.innerHTML = grade;
+            }
 
             // Clear the form inputs
             disciplineInput.value = '';
