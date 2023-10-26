@@ -5,7 +5,7 @@
 
 **server.py**
 
-```python
+```py
 import socket
 import json
 
