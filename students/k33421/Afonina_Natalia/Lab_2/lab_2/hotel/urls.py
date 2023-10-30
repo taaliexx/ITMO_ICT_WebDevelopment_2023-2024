@@ -1,12 +1,12 @@
 from django.urls import path
-from .views import RoomListView, BookingsListView, RoomDetailView, CancelBookingView, EditBookingView
+from .views import RoomListView, BookingsListView, RoomDetailView, CancelBookingView, EditBookingView, IndexView
 from . import views
 from allauth.account.views import LoginView, LogoutView, SignupForm
 
 app_name = 'hotel'
 
 urlpatterns = [
-    path('', views.StartPageView, name='StartPageView'),
+    path('', views.IndexView, name='IndexView'),
     path('room_list/', views.RoomListView, name='RoomListView'),
     path('bookings_list/', views.BookingsListView.as_view(), name='BookingsListView'),
     path('room/<category>', views.RoomDetailView.as_view(), name='RoomDetailView'),

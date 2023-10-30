@@ -2,7 +2,7 @@ from allauth.account.views import LoginView, SignupView
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, FormView, View, DeleteView, UpdateView
-from .models import Room, Bookings, Review, Confirmation
+from .models import Room, Bookings, Review, Confirmation, Hotel
 from .forms import AvailabilityForm, EditBookingForm, ReviewForm
 from hotel.booking_functions.availability import check_availability
 from hotel.booking_functions.get_room_cat_url_list import get_room_cat_url_list
@@ -100,14 +100,6 @@ class EditBookingView(UpdateView):
             return HttpResponse('This room is not available for the selected dates.')
 
 
-def StartPageView(request):
-    return render(request, 'index.html')
-
-
-def HomeView(request):
-    return render(request, 'home.html')
-
-
 def review_list(request):
     reviews = Review.objects.all()
     return render(request, 'hotel/review_list.html', {'reviews': reviews})
@@ -152,3 +144,15 @@ class AddReviewView(View):
                                                rating=rating, text=text)
                 review.save()
         return redirect('hotel:review_list')
+
+
+def IndexView(request):
+    hotel_info = Hotel.objects.first()
+    context = {
+        "hotel_info": hotel_info
+    }
+    return render(request, 'index.html', context)
+
+
+def HomeView(request):
+    return render(request, 'home.html')
