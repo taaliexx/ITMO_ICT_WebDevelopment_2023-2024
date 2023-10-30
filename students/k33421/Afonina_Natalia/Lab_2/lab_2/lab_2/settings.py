@@ -149,9 +149,8 @@ ACCOUNT_FORMS = {
     'signup': 'hotel.forms.CustomSignupForm',
 }
 #
-# AUTH_USER_MODEL = 'hotel.User'
-# #
-# # AUTHENTICATION_CLASSES = (
-# #     # Другие классы аутентификации
-# #     'allauth.account.auth_backends.AuthenticationBackend',
-# # )
+AUTH_USER_MODEL = 'hotel.CustomUser'
+
+AUTHENTICATION_CLASSES = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+)

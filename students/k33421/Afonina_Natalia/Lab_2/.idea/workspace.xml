@@ -7,9 +7,11 @@
     <list default="true" id="83d7812d-c81b-412e-bf7d-3ed299f201e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/hotel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/migrations/0002_confirmation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/migrations/0003_alter_confirmation_confirmed_by.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/migrations/0004_alter_confirmation_confirmed_by.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/hotel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/lab_2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/lab_2/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
