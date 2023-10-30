@@ -100,13 +100,13 @@ class MyHTTPServer:
             for item in self.data:
                 grades_list += f"<li>{item['discipline']}: {item['grade']}</li>"
 
-            with open("D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_1\Task_5\index.html", encoding="utf-8") as f:
+            with open("index.html", encoding="utf-8") as f:
                 html_file = f.read()
 
             html_file = html_file.replace("GRADES", grades_list)
             self.send_response(client_socket, html_file)
         else:
-            with open("Lab_1\\Task_5\\not_found.html", encoding="utf-8") as f:
+            with open("not_found.html", encoding="utf-8") as f:
                 html_file = f.read()
             self.send_response(client_socket, html_file, status_code="404 Not Found")
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <div class="reviews">
+            <h2>Reviews</h2>
+            {% for review in reviews %}
+                <div class="review">
+                    <p class="user-name">User: {{ review.user }}</p>
+                    <p class="user-rating">Rating: {{ review.rating }}/10</p>
+                    <p class="user-room">Room: {{ review.room }}</p>
+                    <div class="user-review">
+                        <p>Review: {{ review.text }}</p>
+                    </div>
+                </div>
+                <p class="review-divider"></p> <!-- Добавляем разделитель между отзывами -->
+            {% endfor %}
+        </div>
+        <div class="home">
+            <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+        </div>
+    </div>
+</body>
+
+</html>

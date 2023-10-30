@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Review</title>
+
+
+</head>
+<body>
+    <div class="home">
+            <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+        </div>
+    <h2>Add Review</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send Review</button>
+    </form>
+</body>
+</html>

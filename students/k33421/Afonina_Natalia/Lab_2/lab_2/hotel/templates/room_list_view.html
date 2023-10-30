@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natasha's Hotel</title>
+<!--    &lt;!&ndash; Main StyleSheet &ndash;&gt;-->
+<!--    <style>-->
+<!--        /* Root CSS */-->
+<!--*{-->
+<!--    padding:0;-->
+<!--    margin:0;-->
+<!--    box-sizing: border-box;-->
+<!--}-->
+<!--body{-->
+<!--    background-color: rgb(46, 47, 48);-->
+<!--    color: rgb(236, 235, 228);-->
+<!--    font-family: sans-serif;-->
+<!--    line-height: 1.25;-->
+<!--}-->
+
+<!--/*Brand CSS */-->
+<!--#brand{-->
+<!--    text-align: center;-->
+<!--    font-family: sans-serif;-->
+<!--    font-size: 3rem;-->
+<!--    margin: 1.5rem;-->
+<!--}-->
+
+<!--/* Main Div */-->
+<!--.content {-->
+<!--    display: flex;-->
+<!--    flex-direction: row;-->
+<!--    flex-wrap: wrap;-->
+<!--    width:100%;-->
+<!--    justify-content: space-evenly;-->
+<!--}-->
+
+<!--/* Room Divs */-->
+<!--.room{-->
+<!--    max-width:20%;-->
+<!--    min-width: 200px;-->
+<!--    text-align: center;-->
+<!--    border-radius: 1rem;-->
+<!--    padding:1rem;-->
+<!--    margin:0.5rem;-->
+<!--    background-color: #444;-->
+<!--    flex: 1;-->
+<!--}-->
+
+<!--.room:hover{-->
+<!--    background-color: #353535;-->
+<!--}-->
+
+<!--/* Inside Room Divs */-->
+<!--h2{-->
+<!--    margin: 0.25rem;-->
+<!--}-->
+<!--a{-->
+<!--    text-decoration: none;-->
+<!--    color: #dbdbdb;-->
+<!--}-->
+<!--img{-->
+<!--    max-width:90%;-->
+<!--}-->
+<!--    </style>-->
+</head>
+
+<body>
+    <!-- Brand -->
+    <h1 id="brand">Natasha's Hotel</h1>
+
+    <!-- Main Content -->
+    <div class="home">
+            <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+    </div>
+    <div class="content">
+        {% for room_category, room_url in room_list %}
+        <div class="room">
+            <a href="{{room_url}}">
+<!--                <img-->
+<!--                    src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">-->
+
+                <h2>{{room_category}}</h2>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>

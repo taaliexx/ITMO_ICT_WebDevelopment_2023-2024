@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Detail</title>
+    <script src="https://kit.fontawesome.com/692189991f.js" crossorigin="anonymous"></script>
+
+    <!-- Main StyleSheet -->
+    <style>
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(46, 47, 48);
+    color: rgb(236, 235, 228);
+    font-family: sans-serif;
+    line-height: 1.25;
+    height: 100vh;
+}
+
+/* Main Divs */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: left;
+}
+
+.image{
+    flex: 0.3;
+}
+
+.room{
+    flex:0.5;
+    margin: 2rem;
+    display:flex;
+    text-align: left;
+    align-items: start;
+    flex-direction: column;
+}
+
+/* Sub Divs */
+
+.home{
+    flex: 0.2;
+}
+.room-info{
+    flex: 0.4;
+    margin: 5rem 1rem;
+
+}
+
+form{
+    display: flex;
+    flex: 0.4 1 auto;
+    flex-direction: column;
+}
+
+/* Inside Sub Divs */
+
+.image img{
+    flex:1;
+    max-height: 99.2vh;
+}
+
+i{
+    color:#dfdfdf;
+    font-size: 2rem;
+}
+
+/* Form's CSS */
+
+.input-div{
+    flex: 1 1 auto;
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input, button{
+    flex:1;
+    width:300px;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+button{
+    background-color: #dfdfdf;
+    color:rgb(6, 137, 245);
+    outline:none;
+}
+
+button:hover{
+    color:#dfdfdf;
+    background-color: rgb(6, 137, 245);
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Room Image -->
+        <div class="image">
+            <img
+                src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        </div>
+
+        <!-- Room Details -->
+        <div class="room">
+
+            <!-- Div 1: Back to Home -->
+            <div class="home">
+                <a href="{% url 'hotel:RoomListView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+            </div>
+
+            <!-- Div 2: Room Information -->
+            <div class="room-info">
+                <h1>{{room_category}}</h1>
+                <p> </p>
+            </div>
+
+            <!-- Div 3: Room Booking Form -->
+            <form id="booking-form" action="" method="POST">
+
+                {% csrf_token %}
+                <h2>Are you sure you want to cancel this Booking {{bookings.room.number}} {{bookings.get_room_category}} {{bookings}}?</h2>
+                <!-- Input Div -->
+                <div class="input-div">
+                    <button type="submit">Cancel the Booking</button>
+                </div>
+
+            </form>
+
+        </div> <!-- END Room Div -->
+
+    </div> <!-- END Main Content Div -->
+
+</body>
+
+</html>
