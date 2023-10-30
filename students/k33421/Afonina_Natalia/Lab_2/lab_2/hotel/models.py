@@ -1,8 +1,5 @@
 from django.conf import settings
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User, AbstractUser
 from django.core.exceptions import PermissionDenied
-from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.urls import reverse, reverse_lazy
 

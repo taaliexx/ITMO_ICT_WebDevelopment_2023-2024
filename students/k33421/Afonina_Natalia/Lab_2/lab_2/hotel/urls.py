@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import RoomListView, BookingsListView, RoomDetailView, CancelBookingView, EditBookingView
 from . import views
-from allauth.account.views import LoginView, LogoutView
+from allauth.account.views import LoginView, LogoutView, SignupForm
 
 app_name = 'hotel'
 

@@ -145,3 +145,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_REDIRECT_URL = '/home'
 
+ACCOUNT_FORMS = {
+    'signup': 'hotel.forms.CustomSignupForm',
+}
+#
+# AUTH_USER_MODEL = 'hotel.User'
+# #
+# # AUTHENTICATION_CLASSES = (
+# #     # Другие классы аутентификации
+# #     'allauth.account.auth_backends.AuthenticationBackend',
+# # )
