@@ -5,36 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83d7812d-c81b-412e-bf7d-3ed299f201e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/deluxe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/double.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/family.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/single.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/static/suite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/base_entrance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/base_manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/entrance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/password_reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/hotel/templates/account/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/add_review.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/admin.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/bookings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/forms.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/functions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/home.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/hotel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/reviews.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/room_detail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/room_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/settings.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/templates.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/urls.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs/views.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/mkdocs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/admin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/bundle.726fbb30.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/bundle.726fbb30.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.da.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.du.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.es.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.fr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.he.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.it.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ja.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.jp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.kn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ko.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.multi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.no.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.pt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ru.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.sa.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.stemmer.support.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.sv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ta.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.te.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.th.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.tr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.vi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.zh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/tinyseg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/wordcut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/workers/search.a264c092.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/workers/search.a264c092.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/main.d451bc0e.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/main.d451bc0e.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/palette.a5377069.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/palette.a5377069.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/forms/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/functions/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/home/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/lab_2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/models/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/search/search_index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/settings/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/sitemap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/sitemap.xml.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/urls/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/site/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/booking_functions/availability.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/booking_functions/availability.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/booking_cancel_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/booking_cancel_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/edit_booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/edit_booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/add_review.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/add_review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/bookings_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/bookings_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/review_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/review_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/room_detail_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/room_detail_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/room_list_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/room_list_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/lab_2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/lab_2/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,11 +131,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\docs\docs\templates" />
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel\static" />
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel\templates\account" />
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel\templates" />
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel\templates\hotel" />
-      <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\django_project_afonina\project_first_app" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

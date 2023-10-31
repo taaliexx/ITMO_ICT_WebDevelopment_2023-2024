@@ -1,3 +1,4 @@
+```python title="urls.py"
 from django.urls import path
 from .views import RoomListView, BookingsListView, RoomDetailView, CancelBookingView, EditBookingView, IndexView
 from . import views
@@ -18,3 +19,4 @@ urlpatterns = [
     path('accounts/logout/', LogoutView.as_view(), name='account_logout'),
     path('home/', views.HomeView, name='HomeView')
 ]
+```

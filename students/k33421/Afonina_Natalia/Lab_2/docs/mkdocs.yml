@@ -1,0 +1,62 @@
+site_name: Web-программирование
+site_description: Лабораторные работы по предмету Web-программирование
+site_author: Наталья Афонина
+repo_url: https://github.com/taaliexx/ITMO_ICT_WebDevelopment_2023-2024
+edit_uri: ""
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: deep purple
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: deep purple
+      accent: deep purple
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/taaliexx"  target="_blank" rel="noopener">Natalia Afonina</a>
+
+nav:
+  - 'Главная страница': 'home.md'
+  - 'Сайт отеля': 'hotel.md'
+  - 'Модели': 'models.md'
+  - 'Представления': 'views.md'
+  - 'Формы': 'forms.md'
+  - 'Дополнительные функции': 'functions.md'
+  - 'Templates': 'templates.md'
+  - 'URLs': 'urls.md'
+  - 'Настройки': 'settings.md'
+  - 'Admin': 'admin.md'
