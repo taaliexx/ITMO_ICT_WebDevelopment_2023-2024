@@ -1,19 +1,72 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natasha's Hotel</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+
+        /* Стили для заголовка */
+        h1 {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            text-align: center;
+
+        }
+
+        /* Стили для описания */
+        p {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;;
+            text-align: center;
+            max-width: 80%; /* Установите желаемую максимальную ширину для текста */
+            margin: 0 auto; /* Чтобы выровнять текст по центру */
+        }
+
+        /* Стили для меню-ссылки */
+        .menu-link {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            background-color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #fff;
+        }
+
+        /* Стили для изображения */
+        .hotel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Помещаем изображение под основным контентом */
+            opacity: 0.2; /* Устанавливаем прозрачность */
+        }
+    </style>
 </head>
 <body>
+    <img src="{% static 'img.png' %}" alt="Hotel Image" class="hotel-image">
     <h1>{{ hotel_info.name }}</h1>
     <p>{{ hotel_info.description }}</p>
-    <ul>
-
-        <li><a href="{% url 'account_login' %}">Log in to explore our rooms and reviews.</a></li>
-
-
-    </ul>
+    <a href="{% url 'account_login' %}" class="menu-link">Log in to explore our rooms and reviews</a>
 </body>
 </html>

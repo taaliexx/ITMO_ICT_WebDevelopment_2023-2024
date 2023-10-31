@@ -4,20 +4,115 @@
     <title>Reviews</title>
 
     <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .content {
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        .reviews {
+            width: 80%;
+        }
+
+        .reviews h1 {
+            font-family: Montserrat, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .review {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%; /* Review container takes the full width */
+        }
+
+        .user-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .user-rating {
+            font-size: 16px;
+        }
+
+        .user-room {
+            font-size: 16px;
+        }
+
+        .check-in {
+            font-size: 16px;
+        }
+
+        .check-out {
+            font-size: 16px;
+        }
+
+        .user-review {
+            font-size: 16px;
+        }
+
+        .review-divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        .home {
+            font-family: Montserrat, sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
+
+        .home a {
+            font-family: Montserrat, sans-serif;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .home a:hover {
+            background-color: #555;
+        }
     </style>
 
 </head>
 <body>
     <div class="content">
         <div class="reviews">
-            <h2>Reviews</h2>
+            <h1>Reviews</h1>
             {% for review in reviews %}
                 <div class="review">
                     <p class="user-name">User: {{ review.user }}</p>
                     <p class="user-rating">Rating: {{ review.rating }}/10</p>
                     <p class="user-room">Room: {{ review.room }}</p>
+                    <p class="check-in">Check-In Date: {{ review.booking.check_in }}</p>
+                    <p class="check-out">Check-Out Date: {{ review.booking.check_out }}</p>
                     <div class="user-review">
                         <p>Review: {{ review.text }}</p>
                     </div>
@@ -26,7 +121,7 @@
             {% endfor %}
         </div>
         <div class="home">
-            <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+            <a href="{% url 'hotel:HomeView' %}">Home</a>
         </div>
     </div>
 </body>

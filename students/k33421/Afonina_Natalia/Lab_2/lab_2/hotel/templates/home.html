@@ -1,15 +1,122 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Стили для заголовка */
+        h2 {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Стили для меню-ссылок */
+        li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f4f4f4;
+            text-decoration: none;
+            border: 2px solid #fff; /* Обводка вокруг ссылок */
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        /* Стили для изображения */
+        .hotel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Помещаем изображение под основным контентом */
+            opacity: 0.2; /* Устанавливаем прозрачность */
+        }
+        /* CSS для сообщений */
+        .messages {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 400px; /* Задайте желаемую максимальную ширину */
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: top 0.3s ease;
+            display: none; /* Начнем с скрытым блоком сообщений */
+        }
+
+        .messages.show {
+            display: block; /* Показывает сообщения при добавлении класса "show" */
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome {{user}}</h2>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <img src="{% static 'img.png' %}" alt="Hotel Image" class="hotel-image">
+    <h2>Welcome {{user.first_name}} {{user.last_name}}</h2>
     <li><a href="{% url 'hotel:RoomListView' %}">View Room List</a></li>
     <li><a href="{% url 'hotel:review_list' %}">Reviews</a></li>
     <li><a href="{% url 'hotel:add_review' %}">Add Review</a></li>
     <li><a href="{% url 'hotel:BookingsListView' %}">Manage Bookings</a></li>
     <li><a href="{% url 'account_logout' %}">Log out</a></li>
+
+    <script>
+        // JavaScript код
+        document.addEventListener('DOMContentLoaded', function() {
+            const messages = document.querySelector('.messages');
+
+            // Показать сообщения
+            function showMessages() {
+                messages.classList.add('show');
+            }
+
+            // Скрыть сообщения
+            function hideMessages() {
+                messages.classList.remove('show');
+            }
+
+            // Показать сообщения при загрузке страницы (если они есть)
+            if (messages) {
+                showMessages();
+
+                // Закрыть сообщения через некоторое время (например, через 5 секунд)
+                setTimeout(hideMessages, 5000);
+            }
+        });
+    </script>
 </body>
 </html>

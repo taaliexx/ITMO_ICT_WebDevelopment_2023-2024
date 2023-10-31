@@ -1,19 +1,131 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>Add Review</title>
 
+     <style>
+    /* Ваши стили здесь */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Стили для контейнера с формой */
+        .container {
+            font-family: Montserrat, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .input-div, select, input[type="text"] {
+            font-family: Montserrat, sans-serif;
+            margin: 10px 0;
+            color: #333
+        }
+
+        /* Стили для кнопки Home */
+        .home {
+            font-family: Montserrat, sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
+
+        .home a {
+            font-family: Montserrat, sans-serif;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px; /* Добавьте отступ справа, например, 10px */
+        }
+
+        .home a:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            font-family: Montserrat, sans-serif;
+            color: #333
+        }
+
+        form {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            color: #333
+        }
+
+        /* Стили для кнопки */
+        button[type="submit"] {
+            font-family: Montserrat, sans-serif;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+
 
 </head>
 <body>
-    <div class="home">
-            <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+    <div class="container">
+        <div class="home">
+            <a href="{% url 'hotel:HomeView' %}">Home</a>
         </div>
-    <h2>Add Review</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Send Review</button>
-    </form>
+        <h2>Add Review</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="input-div">
+                <label for="{{ form.rating.id_for_label }}">Rating:</label>
+                {{ form.rating }}
+            </div>
+
+            <div class="input-div">
+                <label for="{{ form.text.id_for_label }}" style="font-family: Montserrat, sans-serif; color: #333;">Review Text:</label>
+                {{ form.text }}
+            </div>
+
+            <div class="input-div">
+                <label for="{{ form.room.id_for_label }}">Room:</label>
+                {{ form.room }}
+            </div>
+
+            <div class="input-div">
+                <label for="{{ form.booking.id_for_label }}">Booking:</label>
+                {{ form.booking }}
+            </div>
+
+            <div class="submit">
+                <button type="submit">Send Review</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

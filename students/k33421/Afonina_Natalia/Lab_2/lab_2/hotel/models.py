@@ -21,7 +21,7 @@ class Room(models.Model):
         ('DOUBLE', 'Double Room'),
         ('FAMILY', 'Family Room'),
         ('DELUXE', 'Deluxe Room'),
-        ('SUIT', 'Suit'),
+        ('SUITE', 'Suite'),
     )
     number = models.IntegerField()
     category = models.CharField(max_length=6, choices=ROOM_CATEGORIES)
@@ -68,13 +68,13 @@ class Review(models.Model):
     booking = models.ForeignKey(Bookings, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'Review by {self.user} for Room'
+        return f'Review by {self.user} for {self.room}'
 
 
 class Confirmation(models.Model):
     booking = models.OneToOneField(Bookings, on_delete=models.CASCADE)
     is_confirmed = models.BooleanField(default=False)
-    confirmed_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)
+    confirmed_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
     confirmation_date = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):

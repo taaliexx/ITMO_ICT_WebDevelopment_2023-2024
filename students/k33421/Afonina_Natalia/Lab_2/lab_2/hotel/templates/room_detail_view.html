@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -6,43 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Detail</title>
     <script src="https://kit.fontawesome.com/692189991f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Ваши стили */
+        /* Стили для общей страницы */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
+        /* Стили для комнаты */
+        .room {
+            font-family: Montserrat, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
 
+        /* Стили для ссылки "Home" */
+        .home {
+            font-family: Montserrat, sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
+
+        .home a {
+            font-family: Montserrat, sans-serif;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .home a:hover {
+            background-color: #555;
+        }
+
+        /* Стили для информации о комнате */
+        .room-info {
+            font-family: Montserrat, sans-serif;
+        }
+
+        .room-info h1 {
+            font-size: 24px;
+        }
+
+        .room-info h3 {
+            font-size: 20px;
+        }
+
+        .room-info img {
+            max-width: 55%; /* Максимальная ширина для изображения */
+        }
+
+        /* Стили для формы бронирования */
+        #booking-form {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-div {
+            font-family: Montserrat, sans-serif;
+            margin: 10px 0;
+        }
+
+        label {
+            font-family: Montserrat, sans-serif;
+        }
+
+        input[type="datetime-local"] {
+            font-family: Montserrat, sans-serif;
+            padding: 10px;
+        }
+
+        button[type="submit"] {
+            font-family: Montserrat, sans-serif;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Room Image -->
-<!--    <div class="image">-->
-<!--        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">-->
-<!--    </div>-->
-
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <!-- Room Details -->
     <div class="room">
         <!-- Div 1: Back to Home -->
         <div class="home">
-            <a href="{% url 'hotel:RoomListView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+            <div class="home">
+                <a href="{% url 'hotel:RoomListView' %}">Home</i></a>
+            </div>
         </div>
-
         <!-- Div 2: Room Information -->
         <div class="room-info">
             <h1>{{ room_category }}</h1>
-            <p> {{ room_amenities }} </p>
-            <h3> {{ room_price }} $ </h3>
+            {% if room_category == "Single Room" %}
+                <img src="{% static 'single.png' %}" alt="{{room_category}}">
+            {% elif room_category == "Double Room" %}
+                <img src="{% static 'double.png' %}" alt="{{room_category}}">
+            {% elif room_category == "Deluxe Room" %}
+                <img src="{% static 'deluxe.png' %}" alt="{{room_category}}">
+            {% elif room_category == "Family Room" %}
+                <img src="{% static 'family.png' %}" alt="{{room_category}}">
+            {% elif room_category == "Suite" %}
+                <img src="{% static 'suite.png' %}" alt="{{room_category}}">
+            {% endif %}
+            <p>{{ room_amenities }}</p>
+            <h3>{{ room_price }} $</h3>
         </div>
 
         <!-- Div 3: Room Booking Form -->
         <form id="booking-form" action="" method="POST">
             {% csrf_token %}
-            <!-- Input Div -->
+            <!-- Check In Field -->
             <div class="input-div">
-                <label for="id_check_in">Check In : </label>
-                <input type="datetime-local" id="id_check_in" name="check_in">
+                <label for="{{ form.check_in.id_for_label }}" style="font-family: Montserrat, sans-serif;">{{ form.check_in.label_tag }}</label>
+                <input type="datetime-local" id="{{ form.check_in.id_for_label }}" name="{{ form.check_in.name }}" style="font-family: Montserrat, sans-serif;">
             </div>
-            <!-- Input Div -->
+
+            <!-- Check Out Field -->
             <div class="input-div">
-                <label for="id_check_out">Check Out : </label>
-                <input type="datetime-local" id="id_check_out" name="check_out">
+                <label for="{{ form.check_out.id_for_label }}" style="font-family: Montserrat, sans-serif;">{{ form.check_out.label_tag }}</label>
+                <input type="datetime-local" id="{{ form.check_out.id_for_label }}" name="{{ form.check_out.name }}" style="font-family: Montserrat, sans-serif;">
             </div>
+
             <!-- Input Div -->
             <div class="input-div">
                 <button type="submit">Book the Room</button>
@@ -51,6 +170,5 @@
 
     </div> <!-- END Room Div -->
 </body>
-
 
 </html>

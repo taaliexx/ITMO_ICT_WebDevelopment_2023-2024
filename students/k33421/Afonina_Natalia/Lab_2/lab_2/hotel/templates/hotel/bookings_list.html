@@ -1,116 +1,235 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking List</title>
-    <script src="https://kit.fontawesome.com/692189991f.js" crossorigin="anonymous"></script>
+
     <style>
 
         *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-    background-color: rgb(46, 47, 48);
-    color: rgb(236, 235, 228);
-    line-height: 1.5;
-    font-size: 1.2rem;
-    text-align: center;
-}
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-.content{
-    display: flex;
-    flex-direction: column;
-}
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
 
-.header{
-    flex: 1;
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.headings{
-    flex:1.5;
-}
-.home{
-    flex:0.1;
+        /* Стили для заголовка "Your Bookings" */
+        .headings h1 {
+            font-family: Montserrat, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
 
-}
+        /* Стили для "Welcome {{user}}" */
+        .headings h2 {
+            font-family: Montserrat, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
 
-.bookings{
-    margin-top: 2rem;
-    flex:1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.booking{
-    flex:1;
-    max-width:20vw;
-    min-width: 20rem;
-    text-align: left;
-    border: 1px solid #dbdbdb;
-    padding:1rem;
-    border-radius: 0.75rem;
-    margin:1rem;
-}
-.booking:hover{
-    cursor: pointer;
+        }
 
-}
-img{
-    max-width: 100%;
-}
-a i{
-    margin: 1rem;
-    color:rgb(236, 235, 228);
-    text-decoration: none;
-}
-.home a i{
-    font-size: 1.7rem;
+        /* Стили для кнопки Home */
+        .home {
+            font-family: Montserrat, sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
 
-}
+        .home a {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            background-color: #333;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
 
-h1,h2{
-    margin:1rem;
-}
-.booking a i{
-    font-size: 1.1rem;
-    visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-}
+        .home a:hover {
+            background-color: #555;
+        }
 
-.booking:hover .cancel a i,.cancel a i:hover{
-    visibility: visible;
-  opacity: 1;
-}
-.cancel a i:hover{
-    color: rgb(206, 43, 43);
+        .bookings{
+            margin-top: 2rem;
+            flex:1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
-}
+        .booking{
+            font-family: Montserrat, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 18%; /* Устанавливаем ширину комнаты */
+            float: left; /* Выравниваем комнаты влево */
+<!--            flex-grow: 1; /* Позволяет блоку расти по высоте */-->
+<!--            flex-direction: column;-->
+
+        }
+
+
+        .category img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+
+        .home a i{
+            font-size: 1.7rem;
+
+        }
+
+        /* Стили для категории комнаты */
+        .category h2 {
+            font-family: Montserrat, sans-serif;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        .booking a i{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+            font-size: 1.1rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        .booking:hover .cancel a i,.cancel a i:hover{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+            visibility: visible;
+            opacity: 1;
+        }
+        .cancel a i:hover{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+            color: rgb(206, 43, 43);
+
+        }
+        .from h3{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+        }
+        .to h3{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+        }
+        .capacity h3{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+        }
+        .beds h3{
+            font-family: Montserrat, sans-serif;
+            color: #333;
+        }
+
+        .cancel a {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            background-color: #333;
+            padding: 5px 10px; /* Уменьшили внутренние отступы */
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block; /* Изменили на блочный элемент, чтобы не перекрывать текст */
+            font-size: 14px; /* Уменьшили размер шрифта */
+            line-height: 1; /* Уменьшили межстрочное расстояние */
+            margin-top: 5px; /* Добавили небольшой отступ сверху */
+        }
+
+        .cancel a:hover {
+            background-color: #555;
+        }
+
+        .update a {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            background-color: #333;
+            padding: 5px 10px; /* Уменьшили внутренние отступы */
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block; /* Изменили на блочный элемент, чтобы не перекрывать текст */
+            font-size: 14px; /* Уменьшили размер шрифта */
+            line-height: 1; /* Уменьшили межстрочное расстояние */
+            margin-top: 5px; /* Добавили небольшой отступ сверху */
+        }
+
+        .update a:hover {
+            background-color: #555;
+        }
+
+        /* CSS для сообщений */
+        .messages {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 400px; /* Задайте желаемую максимальную ширину */
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: top 0.3s ease;
+            display: none; /* Начнем с скрытым блоком сообщений */
+        }
+
+        .messages.show {
+            display: block; /* Показывает сообщения при добавлении класса "show" */
+        }
 
     </style>
+
 </head>
 
 <body>
+    {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+    {% endif %}
     <div class="content">
         <div class="header">
             <div class="headings">
-                <h1>Your Bookings</h1>
-                <h2>Welcome {{user}}</h2>
+                <h1>Welcome {{user.first_name}} {{user.last_name}}</h1>
+                <h2>Your Bookings</h2>
             </div>
             <div class="home">
                 <!-- Div 1: Back to Home -->
                 <div class="home">
-                    <a href="{% url 'hotel:HomeView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
-                </div>
+                    <a href="{% url 'hotel:HomeView' %}">Home</a>
             </div>
 
         </div>
@@ -118,32 +237,65 @@ h1,h2{
         <div class="bookings">
             {% for booking in bookings_list %}
             <div class="booking">
-                <img src="https://images.unsplash.com/photo-1560067174-c5a3a8f37060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80"
-                    alt="">
                 <div class="category">
                     <h2>{{booking.get_room_category}}</h2>
+                    {% if booking.get_room_category == "Single Room" %}
+                    <img src="{% static 'single.png' %}" alt="{{booking.get_room_category}}">
+                    {% elif booking.get_room_category == "Double Room" %}
+                        <img src="{% static 'double.png' %}" alt="{{booking.get_room_category}}">
+                    {% elif booking.get_room_category == "Deluxe Room" %}
+                        <img src="{% static 'deluxe.png' %}" alt="{{booking.get_room_category}}">
+                    {% elif booking.get_room_category == "Family Room" %}
+                        <img src="{% static 'family.png' %}" alt="{{booking.get_room_category}}">
+                    {% elif booking.get_room_category == "Suite" %}
+                        <img src="{% static 'suite.png' %}" alt="{{booking.get_room_category}}">
+                    {% endif %}
                 </div>
-                <div class="from">
-                    <h3>From: {{booking.check_in}}</h3>
-                </div>
-                <div class="to">
-                    <h3>To: {{booking.check_out}}</h3>
-                </div>
-                <div class="beds">
-                    <h3>Beds: {{booking.room.beds}}</h3>
-                </div>
-                <div class="capacity">
-                    <h3>Capacity: {{booking.room.capacity}}</h3>
-                </div>
-                <div class="cancel"><a href="{{booking.get_cancel_booking_url}}" class="btn btn-primary"><i
-                            class="far fa-times-circle"> Cancel Booking</i></a></div>
+                    <div class="from">
+                        <h3>From: {{booking.check_in}}</h3>
+                    </div>
+                    <div class="to">
+                        <h3>To: {{booking.check_out}}</h3>
+                    </div>
+                    <div class="beds">
+                        <h3>Beds: {{booking.room.beds}}</h3>
+                    </div>
+                    <div class="capacity">
+                        <h3>Capacity: {{booking.room.capacity}}</h3>
+                    </div>
+                    <div class="cancel"><a href="{{booking.get_cancel_booking_url}}">Cancel Booking</a></div>
 
-                <div class="update"><a href="{{booking.edit_booking}}" class="btn btn-primary"><i
-                        class="far fa-edit"></i> Update Booking</a></div>
+                    <div class="update"><a href="{{booking.edit_booking}}">Update Booking</a></div>
 
             </div>
             {% endfor %}
         </div>
+
+            <script>
+        // JavaScript код
+        document.addEventListener('DOMContentLoaded', function() {
+            const messages = document.querySelector('.messages');
+
+            // Показать сообщения
+            function showMessages() {
+                messages.classList.add('show');
+            }
+
+            // Скрыть сообщения
+            function hideMessages() {
+                messages.classList.remove('show');
+            }
+
+            // Показать сообщения при загрузке страницы (если они есть)
+            if (messages) {
+                showMessages();
+
+                // Закрыть сообщения через некоторое время (например, через 5 секунд)
+                setTimeout(hideMessages, 5000);
+            }
+        });
+    </script>
+
 </body>
 
 </html>

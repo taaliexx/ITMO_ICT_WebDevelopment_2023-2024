@@ -1,137 +1,136 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        /* Ваши стили */
+        /* Стили для общей страницы */
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-     <style>
+        /* Стили для контейнера с формой */
+        .container {
+            font-family: Montserrat, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
 
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}
-body{
-    background-color: rgb(46, 47, 48);
-    color: rgb(236, 235, 228);
-    font-family: sans-serif;
-    line-height: 1.25;
-    height: 100vh;
-}
+        /* Стили для заголовка "Edit Booking" */
+        h1 {
+            font-family: Montserrat, sans-serif;
+            color: #333
+        }
 
-/* Main Divs */
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:100%;
-    justify-content: left;
-}
+        /* Стили для формы */
+        form {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            color: #333
+        }
 
-.image{
-    flex: 0.3;
-}
+        /* Стили для полей ввода и выбора */
+        .input-div, select {
+            font-family: Montserrat, sans-serif;
+            margin: 10px 0;
+            color: #333
+        }
 
-.room{
-    flex:0.5;
-    margin: 2rem;
-    display:flex;
-    text-align: left;
-    align-items: start;
-    flex-direction: column;
-}
+        /* Стили для кнопки "Save Changes" */
+        button[type="submit"] {
+            font-family: Montserrat, sans-serif;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
 
-/* Sub Divs */
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
 
-.home{
-    flex: 0.2;
-}
-.room-info{
-    flex: 0.4;
-    margin: 5rem 1rem;
+         /* Стили для кнопки Home */
+        .home {
+            font-family: Montserrat, sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 999;
+        }
 
-}
+        .home a {
+            font-family: Montserrat, sans-serif;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px; /* Добавьте отступ справа, например, 10px */
+        }
 
-form{
-    display: flex;
-    flex: 0.4 1 auto;
-    flex-direction: column;
-}
-
-/* Inside Sub Divs */
-
-.image img{
-    flex:1;
-    max-height: 99.2vh;
-}
-
-i{
-    color:#dfdfdf;
-    font-size: 2rem;
-}
-
-/* Form's CSS */
-
-.input-div{
-    flex: 1 1 auto;
-    margin:1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-input, button{
-    flex:1;
-    width:300px;
-    border-radius: 0.5rem;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    color: #555;
-}
-
-button{
-    background-color: #dfdfdf;
-    color:rgb(6, 137, 245);
-    outline:none;
-}
-
-button:hover{
-    color:#dfdfdf;
-    background-color: rgb(6, 137, 245);
-}
-
+        .home a:hover {
+            background-color: #555;
+        }
+        
     </style>
-
 </head>
 <body>
     {% block content %}
-    <h1>Edit Booking</h1>
-    <form method="post">
-        {% csrf_token %}
+    <div class="home">
+            <a href="{% url 'hotel:BookingsListView' %}">Get Back</a>
+    </div>
+    <div class="container">
+        <h1>Edit Booking</h1>
+        <form method="post">
+            {% csrf_token %}
 
-        <!-- Check In Field -->
-        <div class="input-div">
-            {{ form.check_in.label_tag }}
-            {{ form.check_in }}
-        </div>
 
-        <!-- Check Out Field -->
-        <div class="input-div">
-            {{ form.check_out.label_tag }}
-            {{ form.check_out }}
-        </div>
+            <!-- Check In Field -->
+            <div class="input-div">
+                <label for="{{ form.check_in.id_for_label }}" style="font-family: Montserrat, sans-serif;">{{ form.check_in.label_tag }}</label>
+                <input type="datetime-local" id="{{ form.check_in.id_for_label }}" name="{{ form.check_in.name }}" style="font-family: Montserrat, sans-serif;" value="{{ form.instance.check_in|date:'Y-m-d\TH:i:s' }}">
+            </div>
 
-        <!-- Room Category Field (добавленное поле) -->
-        <div class="input-div">
-            <label for="{{ form.room.id_for_label }}">Room Category : </label>
-            {{ form.room }}
-        </div>
+            <!-- Check Out Field -->
+            <div class="input-div">
+                <label for="{{ form.check_out.id_for_label }}" style="font-family: Montserrat, sans-serif;">{{ form.check_out.label_tag }}</label>
+                <input type="datetime-local" id="{{ form.check_out.id_for_label }}" name="{{ form.check_out.name }}" style="font-family: Montserrat, sans-serif;" value="{{ form.instance.check_out|date:'Y-m-d\TH:i:s' }}">
+            </div>
 
-        <!-- Save Changes Button -->
-        <div class="input-div">
-            <button type="submit">Save Changes</button>
-        </div>
-    </form>
+            <!-- Room Category Field (добавленное поле) -->
+            <div class="input-div">
+                <label for="{{ form.room.id_for_label }}">Room Category : </label>
+                {{ form.room }}
+            </div>
+
+            <!-- Save Changes Button -->
+            <div class="input-div">
+                <button type="submit">Save Changes</button>
+            </div>
+        </form>
+    </div>
     {% endblock %}
 </body>
 </html>
