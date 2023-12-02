@@ -34,6 +34,12 @@ class BookingSerializer(serializers.ModelSerializer):
 
 class EmployeeScheduleSerializer(serializers.ModelSerializer):
     class Meta:
+        model = RoomCleaningSchedule
+        fields = '__all__'
+
+
+class UpdateEmployeeScheduleSerializer(serializers.ModelSerializer):
+    class Meta:
         model = EmployeeSchedule
         fields = '__all__'
 

@@ -1,3 +1,67 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Data for Report</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 400px; /* Set the maximum width for better readability */
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        label {
+            text-align: left;
+            margin: 10px 0; /* Add margin for spacing between labels */
+        }
+
+        input[type="number"], select {
+            font-family: Montserrat, sans-serif;
+            padding: 10px;
+            margin: 5px 0; /* Adjust margin for better spacing */
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            font-family: Montserrat, sans-serif;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f4f4f4;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        input[type="button"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
 <h2>Select Data for Report</h2>
 
 <form method="get" action="">
@@ -23,3 +87,4 @@
         window.location.href = url;
     }
 </script>
+</body>

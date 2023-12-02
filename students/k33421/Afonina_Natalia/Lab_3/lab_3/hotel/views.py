@@ -174,7 +174,7 @@ def fire_employee(request):
 
 class UpdateEmployeeScheduleView(generics.RetrieveUpdateAPIView):
     queryset = EmployeeSchedule.objects.all()
-    serializer_class = EmployeeScheduleSerializer
+    serializer_class = UpdateEmployeeScheduleSerializer
     permission_classes = (IsAdminUser,)
 
 
