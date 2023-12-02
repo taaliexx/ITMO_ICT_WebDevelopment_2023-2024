@@ -1,0 +1,19 @@
+<h2>Check in and Check out</h2>
+    <label for="booking">Select Client's booking:</label>
+    <select name="schedule" id="booking" required>
+        {% for booking in bookings %}
+                <option value="{{ booking.id }}">{{ booking.user.first_name }} {{ booking.user.last_name }}'s booking
+                    {{ booking.room }} from {{ booking.check_in }} to {{ booking.check_out }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="button" value="Select" onclick="submitForm()">
+</form>
+
+<script>
+    function submitForm() {
+        const bookingId = document.getElementById("booking").value;
+        const url = `/hotel/check_in_client/${bookingId}/`;
+        window.location.href = url;
+    }
+</script>

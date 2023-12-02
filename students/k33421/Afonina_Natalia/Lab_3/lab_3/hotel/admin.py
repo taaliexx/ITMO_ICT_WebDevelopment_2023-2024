@@ -8,3 +8,5 @@ admin.site.register(Bookings)
 admin.site.register(Employee)
 admin.site.register(EmployeeSchedule)
 admin.site.register(RoomCleaningSchedule)
+
+

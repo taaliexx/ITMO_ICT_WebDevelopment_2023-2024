@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Links</title>
+</head>
+<body>
+    <h1>Links</h1>
+
+    <ul>
+        <li><a href="{% url 'hotel:room_list' %}">Room List</a></li>
+        <li><a href="{% url 'hotel:client_list' %}">Client List</a></li>
+        <li><a href="{% url 'hotel:create_room' %}">Create Room and Room List</a></li>
+
+        <li><a href="{% url 'hotel:clients_in_room_form' %}">Clients in Room Form</a></li>
+        <li><a href="{% url 'hotel:clients_from_city_form' %}">Clients from City Form</a></li>
+        <li><a href="{% url 'hotel:cleaner_for_client_form' %}">Cleaner for Client Form</a></li>
+        <li><a href="{% url 'hotel:free_rooms_form' %}">Free Rooms Form</a></li>
+        <li><a href="{% url 'hotel:clients_in_the_same_days_form' %}">Clients in the same days form</a></li>
+
+
+        <li><a href="{% url 'hotel:employee_list' %}">Hire Employee</a></li>
+        <li><a href="{% url 'hotel:fire_employee' %}">Select Employee to Fire</a></li>
+        <li><a href="{% url 'hotel:update_employee_schedule_form' %}">Update Employee Schedule</a></li>
+
+        <li><a href="{% url 'hotel:check_in' %}">Check In or Check Out</a></li>
+
+
+        <li><a href="{% url 'hotel:quarterly_report_data' %}">Quarterly Report Form</a></li>
+
+    </ul>
+</body>
+</html>

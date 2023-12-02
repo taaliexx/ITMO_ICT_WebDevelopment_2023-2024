@@ -7,8 +7,8 @@
 
 <script>
     function submitForm() {
-        const city = document.getElementById("from_city").value;
-        const url = `/hotel/clients_from_city/${from_city}`;
+        const from_city = document.getElementById("from_city").value;
+        const url = `/hotel/clients_from_city/${from_city}/`;
         window.location.href = url;
     }
 </script>

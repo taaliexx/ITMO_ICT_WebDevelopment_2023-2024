@@ -1,0 +1,20 @@
+<h2>Fire Employee</h2>
+
+<form method="get" action="">
+    <label for="employee">Select Employee:</label>
+    <select name="employee" id="employee" required>
+        {% for employee in employees %}
+            <option value="{{ employee.id }}">{{ employee.last_name }} {{ employee.first_name }} {{ employee.middle_name }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="button" value="Select" onclick="submitForm()">
+</form>
+
+<script>
+    function submitForm() {
+        const employeeId = document.getElementById("employee").value;
+        const url = `/hotel/fire_employee/${employeeId}/`;
+        window.location.href = url;
+    }
+</script>

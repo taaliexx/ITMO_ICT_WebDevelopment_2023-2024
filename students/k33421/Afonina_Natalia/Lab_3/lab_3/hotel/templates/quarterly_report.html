@@ -1,0 +1,25 @@
+<h2>Select Data for Report</h2>
+
+<form method="get" action="">
+    <label for="quarter">Quarter:</label>
+    <input type="number" name="quarter" min="1" max="4" required>
+    <br>
+
+    <label for="year">Year:</label>
+    <select name="year" required>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+    </select>
+    <br>
+
+    <input type="button" value="Get Report" onclick="submitForm()">
+</form>
+
+<script>
+    function submitForm() {
+        const quarter = document.querySelector('input[name="quarter"]').value;
+        const year = document.querySelector('select[name="year"]').value;
+        const url = `/hotel/quarterly_report/${quarter}/${year}/`;
+        window.location.href = url;
+    }
+</script>

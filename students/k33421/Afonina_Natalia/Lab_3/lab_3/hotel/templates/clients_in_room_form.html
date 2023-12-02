@@ -1,6 +1,10 @@
 <form id="clientsInRoomForm">
-    <label for="roomNumber">Room Number:</label>
-    <input type="text" id="roomNumber" name="roomNumber" required>
+    <label for="room">Room:</label>
+    <select name="room" id="room" required>
+        {% for room in rooms %}
+            <option value="{{ room.number }}">{{ room.number }} {{ room.category }}</option>
+        {% endfor %}
+    </select>
 
     <label for="startDate">Start Date:</label>
     <input type="date" id="startDate" name="startDate" required>
@@ -13,7 +17,7 @@
 
 <script>
     function submitForm() {
-        const roomNumber = document.getElementById("roomNumber").value;
+        const roomNumber = document.getElementById("room").value;
         const startDate = document.getElementById("startDate").value;
         const endDate = document.getElementById("endDate").value;
 

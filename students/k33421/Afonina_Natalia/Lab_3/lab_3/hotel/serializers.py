@@ -33,9 +33,34 @@ class BookingSerializer(serializers.ModelSerializer):
 
 
 class EmployeeScheduleSerializer(serializers.ModelSerializer):
-    employee = EmployeeSerializer()
-
     class Meta:
-        model = RoomCleaningSchedule
+        model = EmployeeSchedule
         fields = '__all__'
 
+
+class CheckInClientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bookings
+        fields = ["check_in_done", "check_out_done"]
+
+
+class RoomClientReportSerializer(serializers.Serializer):
+    room__number = serializers.CharField()
+    num_clients = serializers.IntegerField()
+
+
+class FloorReportSerializer(serializers.Serializer):
+    floor = serializers.IntegerField()
+    num_rooms = serializers.IntegerField()
+
+
+class TotalIncomeForRoomSerializer(serializers.Serializer):
+    room__number = serializers.CharField()
+    total_income_for_room = serializers.IntegerField()
+
+
+class HotelReportSerializer(serializers.Serializer):
+    room_client_reports = RoomClientReportSerializer(many=True)
+    floor_reports = FloorReportSerializer(many=True)
+    total_income_for_room = TotalIncomeForRoomSerializer(many=True)
+    total_income_for_hotel = serializers.IntegerField()

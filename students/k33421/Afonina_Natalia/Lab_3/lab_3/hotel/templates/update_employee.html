@@ -1,0 +1,18 @@
+<h2>Update Employee Schedule</h2>
+    <label for="schedule">Select Schedule:</label>
+    <select name="schedule" id="schedule" required>
+        {% for schedule in schedules %}
+                <option value="{{ schedule.id }}">{{ schedule.employee }} {{ schedule.floor }} - {{ schedule.work_day }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="button" value="Select" onclick="submitForm()">
+</form>
+
+<script>
+    function submitForm() {
+        const scheduleId = document.getElementById("schedule").value;
+        const url = `/hotel/update_employee_schedule/${scheduleId}/`;
+        window.location.href = url;
+    }
+</script>
