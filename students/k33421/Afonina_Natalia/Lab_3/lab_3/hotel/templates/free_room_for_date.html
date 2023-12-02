@@ -1,0 +1,22 @@
+<h2>Free Rooms Form</h2>
+
+<form method="post" id="freeRoomsForm" action="">
+    <label for="check_in_date">Check-in Date:</label>
+    <input type="date" name="check_in_date" id="check_in_date" required>
+    <br>
+
+    <label for="check_out_date">Check-out Date:</label>
+    <input type="date" name="check_out_date" id="check_out_date" required>
+    <br>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        const checkInDate = document.getElementById("check_in_date").value;
+        const checkOutDate = document.getElementById("check_out_date").value;
+        const url = `/hotel/free_rooms/${checkInDate}/${checkOutDate}/`;
+        window.location.href = url;
+    }
+</script>

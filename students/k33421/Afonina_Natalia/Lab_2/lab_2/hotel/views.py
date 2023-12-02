@@ -59,13 +59,17 @@ class RoomDetailView(View):
             available_rooms = []
             for room in room_list:
                 if check_availability(room, data['check_in'], data['check_out']):
-                    if data['check_in'] > timezone.now():
-                        available_rooms.append(room)
+                    if data['check_in'] < data['check_out']:
+                        if data['check_in'] > timezone.now():
+                            available_rooms.append(room)
+                        else:
+                            messages.error(request, "You can't book a room for dates in the past.")
+                            return redirect('hotel:RoomListView')
                     else:
-                        messages.error(request, "You can't book a room for dates in the past.")
+                        messages.error(request, "You can't book a room with check out earlier than check in.")
                         return redirect('hotel:RoomListView')
                 else:
-                    messages.error(request, "You can't book a room with check out earlier than check in.")
+                    messages.error(request, "Room is fully booked for the selected dates.")
                     return redirect('hotel:RoomListView')
             if len(available_rooms) > 0:
                 room = available_rooms[0]
@@ -151,9 +155,7 @@ class AddReviewView(View):
             rating = form.cleaned_data['rating']
             text = form.cleaned_data['text']
 
-            # Check if the user is a staff member
             if user.is_staff:
-                # Staff members can create reviews for any booking and room
                 review = Review.objects.create(user=user, booking_id=booking_id, room_id=room_id, rating=rating,
                                                text=text)
                 review.save()

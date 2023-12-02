@@ -5,85 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83d7812d-c81b-412e-bf7d-3ed299f201e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/docs/add_review.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/admin.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/bookings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/forms.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/functions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/home.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/hotel.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/models.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/reviews.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/room_detail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/room_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/settings.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/templates.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/urls.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docs/views.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mkdocs.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/admin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/bundle.726fbb30.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/bundle.726fbb30.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.da.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.du.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.es.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.fr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.he.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.hy.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ja.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.jp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.kn.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ko.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.multi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.no.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.pt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ro.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ru.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.sa.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.stemmer.support.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.sv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.ta.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.te.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.th.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.tr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.vi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/min/lunr.zh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/tinyseg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/lunr/wordcut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/workers/search.a264c092.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/javascripts/workers/search.a264c092.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/main.d451bc0e.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/main.d451bc0e.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/palette.a5377069.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/assets/stylesheets/palette.a5377069.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/forms/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/functions/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/lab_2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/models/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/search/search_index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/settings/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/sitemap.xml.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/urls/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/site/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/ITMO_ICT_WebDevelopment_2023-2024.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_1/.idea/Lab_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_project_afonina/.idea/django_project_afonina.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/Lab_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/wheel-3.10.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/wheel.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/wheel3.10.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/Interpreter/Scripts/wheel3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/templates/cleaner_for_client_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/templates/clients_from_city_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/templates/clients_in_room_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/templates/clients_in_same_days_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/templates/free_room_for_date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/hotel/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/lab_3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/lab_3/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/lab_3/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/lab_3/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/lab_3/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/lab_3/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/Activate.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/activate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/activate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/deactivate.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/django-admin.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/pip.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/pip3.10.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/pip3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/Scripts/sqlformat.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_3/myenv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lab_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab_2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/review_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/templates/hotel/review_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/hotel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/booking_functions/get_room_cat_url_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/booking_functions/get_room_cat_url_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/hotel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/hotel/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/lab_2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/lab_2/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,8 +76,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -124,12 +106,19 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ITMO_ICT_WebDevelopment_2023-2024&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\lab_2" />
+      <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel" />
+      <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\docs\docs\templates" />
       <recent name="D:\ITMO_ICT_WebDevelopment_2023-2024\students\k33421\Afonina_Natalia\Lab_2\lab_2\hotel\static" />

@@ -1,0 +1,14 @@
+<form id="clientsFromCityForm">
+    <label for="from_city">City:</label>
+    <input type="text" id="from_city" name="from_city" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        const city = document.getElementById("from_city").value;
+        const url = `/hotel/clients_from_city/${from_city}`;
+        window.location.href = url;
+    }
+</script>

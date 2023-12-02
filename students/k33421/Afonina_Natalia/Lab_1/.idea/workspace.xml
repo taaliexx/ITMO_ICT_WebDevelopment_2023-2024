@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e5c78827-7d74-46e5-af0a-878047095923" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/django_project_afonina.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/django_project_afonina/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/.idea/Lab_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/.idea/Lab_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/lab_2/hotel/booking_functions/get_room_cat_url_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/lab_2/hotel/booking_functions/get_room_cat_url_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/lab_2/hotel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/lab_2/hotel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_2/lab_2/lab_2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_2/lab_2/lab_2/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2YdBq6Cot2IDDEijKhuW4xeRtr7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/ITMO_ICT_WebDevelopment_2023-2024/students/k33421/Afonina_Natalia/Lab_1"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5c78827-7d74-46e5-af0a-878047095923" name="Changes" comment="" />
+      <created>1700845763998</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700845763998</updated>
+    </task>
+    <servers />
+  </component>
+</project>

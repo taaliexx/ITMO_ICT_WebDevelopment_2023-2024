@@ -77,6 +77,8 @@ class Confirmation(models.Model):
     confirmed_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
     confirmation_date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'Confirmation for {self.booking} by {self.confirmed_by}'
     def save(self, *args, **kwargs):
         if self.confirmed_by and not self.confirmed_by.is_staff:
             raise PermissionDenied("Only staff members can confirm bookings.")

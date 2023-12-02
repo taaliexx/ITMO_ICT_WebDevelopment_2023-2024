@@ -1,0 +1,23 @@
+<form id="clientsInRoomForm">
+    <label for="roomNumber">Room Number:</label>
+    <input type="text" id="roomNumber" name="roomNumber" required>
+
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        const roomNumber = document.getElementById("roomNumber").value;
+        const startDate = document.getElementById("startDate").value;
+        const endDate = document.getElementById("endDate").value;
+
+        const url = `/hotel/clients_in_room/${roomNumber}/${startDate}/${endDate}`;
+        window.location.href = url;
+    }
+</script>

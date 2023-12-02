@@ -11,5 +11,5 @@ def get_room_cat_url_list():
         room_category = room_categories.get(category)
         room_url = reverse('hotel:RoomDetailView', kwargs={'category': category})
         room_cat_url_list.append((room_category, room_url))
-
     return room_cat_url_list
+
