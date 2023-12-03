@@ -52,3 +52,6 @@ copyright: |
 nav:
   - 'Главная страница': 'home.md'
   - 'Практическая работа': 'practicalwork.md'
+  - 'Лабораторная работа': 'labwork.md'
+  - 'Представления': 'views.md'
+  - 'Сериализаторы': 'serializers.md'

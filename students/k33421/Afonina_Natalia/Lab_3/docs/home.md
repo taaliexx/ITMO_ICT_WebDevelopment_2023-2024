@@ -6,3 +6,6 @@
 ## Ход работы
 
 * [Практическая работа. Django Web framework. Запросы и их выполнение.](practicalwork.md)
+* [Описание работы и модели БД](labwork.md)
+* [Представления](views.md)
+* [Сериализаторы](serializers.md)
