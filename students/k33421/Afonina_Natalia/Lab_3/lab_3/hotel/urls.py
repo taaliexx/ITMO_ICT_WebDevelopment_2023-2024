@@ -36,4 +36,6 @@ urlpatterns = [
     path('quarterly_report_data/', quarterly_report, name='quarterly_report_data'),
     path('quarterly_report/<int:quarter>/<int:year>/', QuarterlyReportView.as_view(), name='quarterly_report'),
     path('', form_links, name='form_links'),
+    path('user_bookings/<int:user_id>/', UserBookingsView.as_view(), name='user-bookings'),
+
 ]

@@ -7,6 +7,7 @@ class Client(models.Model):
     middle_name = models.CharField(max_length=20, blank=True)
     passport = models.CharField(max_length=15)
     from_city = models.CharField(max_length=20)
+    bookings = models.ManyToManyField('Bookings', related_name='client_bookings', blank=True)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
@@ -36,7 +37,7 @@ class Room(models.Model):
 
 
 class Bookings(models.Model):
-    user = models.ForeignKey(Client, on_delete=models.CASCADE)
+    user = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='user_bookings')
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     check_in = models.DateField()
     check_out = models.DateField()

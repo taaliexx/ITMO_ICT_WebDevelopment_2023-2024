@@ -32,6 +32,20 @@ class BookingSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class BookingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bookings
+        fields = ['check_in', 'check_out', 'check_in_done', 'check_out_done', 'room']
+
+
+class UserBookingsSerializer(serializers.ModelSerializer):
+    user_bookings = BookingSerializer(many=True, read_only=True, source='user_bookings.all')
+
+    class Meta:
+        model = Client
+        fields = ['id', 'first_name', 'last_name', 'middle_name', 'passport', 'from_city', 'user_bookings']
+
+
 class EmployeeScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = RoomCleaningSchedule

@@ -3,6 +3,7 @@ from datetime import datetime
 from django.db.models import Sum, Count
 from django.db.models.functions import Coalesce
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.generics import ListAPIView
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
 from rest_framework.views import *
 from rest_framework.response import Response
@@ -243,3 +244,12 @@ class QuarterlyReportView(APIView):
 
 def form_links(request):
     return render(request, 'form_links.html')
+
+
+class UserBookingsView(ListAPIView):
+    serializer_class = UserBookingsSerializer
+    permission_classes = (IsAdminUser,)
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']  # Assuming you pass the user_id in the URL
+        return Client.objects.filter(id=user_id)
