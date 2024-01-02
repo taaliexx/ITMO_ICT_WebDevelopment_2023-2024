@@ -29,7 +29,7 @@
             <option v-for="floor in availableFloors" :key="floor.id" :value="floor.id">{{ floor.floor }}</option>
           </select>
 
-          <button type="submit">Add Room</button>
+          <button type="submit">   Add Room</button>
         </form>
       </div>
 
@@ -113,3 +113,101 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.rooms_container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.rooms_content {
+  text-align: center;
+  width: 100%;
+}
+
+.add_room form {
+  width: 80%;
+  max-width: 400px; /* Ограничиваем максимальную ширину формы */
+  margin: 0 auto; /* Центрируем форму в родительском контейнере */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.add_room label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add_room select,
+.add_room input {
+  width: 100%; /* Занимает всю ширину доступного пространства */
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add_room button[type="submit"] {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.add_room button[type="submit"]:hover {
+  background-color: #1e6ea9;
+}
+
+.room_list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.room_list li {
+  width: 80%;
+  max-width: 400px; /* Ограничиваем максимальную ширину списка комнат */
+  align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin: 0 auto; /* Центрируем элемент списка в родительском контейнере */
+}
+
+.room_list button {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.room_list button:hover {
+  background-color: #1e6ea9;
+}
+
+.room_list p {
+  margin: 5px 0;
+}
+
+.room_list h2 {
+  margin-bottom: 10px;
+}
+
+.room_list div {
+  margin-top: 20px;
+}
+</style>

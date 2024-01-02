@@ -9,6 +9,9 @@ import QuarterlyReport from './components/QuarterlyReport.vue';
 import BookingsList from './components/BookingsList.vue';
 import LoginView from './components/LoginView.vue';
 
+import Vuetify from 'vuetify';  // Добавьте эту строку
+import 'vuetify/dist/vuetify.min.css';  // И эту строку для подключения стилей
+
 
 const app = createApp(App);
 
@@ -42,5 +45,8 @@ router.beforeEach((to, from, next) => {
 app.use(router);
 
 app.config.globalProperties.$http = axios;
+
+
+app.use(Vuetify);
 
 app.mount('#app');

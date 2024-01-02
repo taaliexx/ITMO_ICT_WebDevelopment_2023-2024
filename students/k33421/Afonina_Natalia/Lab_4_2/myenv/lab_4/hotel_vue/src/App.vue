@@ -29,6 +29,7 @@ export default {
   margin-top: 60px;
 }
 
+#button
 nav {
   margin-bottom: 20px;
 }

@@ -4,10 +4,10 @@
     <form @submit.prevent="generateReport">
       <label for="quarter">Select Quarter:</label>
       <select v-model="selectedQuarter" required>
-        <option value="1">Q1</option>
-        <option value="2">Q2</option>
-        <option value="3">Q3</option>
-        <option value="4">Q4</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
       </select>
 
       <label for="year">Enter Year:</label>
@@ -85,5 +85,47 @@ export default {
 </script>
 
 <style scoped>
-/* Ваши стили для компонента (если нужны) */
+.quarterly-report {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quarterly-report form {
+  margin-bottom: 20px;
+}
+
+.quarterly-report label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.quarterly-report select,
+.quarterly-report input {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.quarterly-report button[type="submit"] {
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.quarterly-report button[type="submit"]:hover {
+  background-color: #1e6ea9;
+}
+
+.quarterly-report h3,
+.quarterly-report h4 {
+  margin-top: 20px;
+}
 </style>

@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00f329b5-bd5b-4097-9a88-f46a9466bf27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/LoginView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/vuetify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/BookingsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/BookingsList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/QuarterlyReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/QuarterlyReport.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/RoomList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/components/RoomList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/lab_4/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/lab_4/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/hotel_vue/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/lab_4/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/myenv/lab_4/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab_4_2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_4_2/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -7,8 +7,8 @@
       <h3>All Bookings</h3>
       <ul>
         <li v-for="booking in bookings" :key="booking.id">
-          <p>User: {{ booking.user.first_name }}</p>
-          <p>Room: {{ booking.room.number }}</p>
+          <p>User: {{ booking.user }}</p>
+          <p>Room: {{ booking.room }}</p>
           <p>Check In: {{ booking.check_in }}</p>
           <p>Check Out: {{ booking.check_out }}</p>
           <p>Check In Done: {{ booking.check_in_done }}</p>
