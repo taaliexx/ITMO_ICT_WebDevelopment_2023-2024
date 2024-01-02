@@ -16,6 +16,7 @@ from django.db.models import Count, Sum, ExpressionWrapper, F, fields, Expressio
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.timezone import make_aware
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
 
 
 @csrf_exempt
