@@ -1,0 +1,95 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the form horizontally within the available space */
+            width: 80%;
+            max-width: 400px; /* Set the maximum width for better readability */
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        label {
+            font-family: Montserrat, sans-serif;
+            color: #f4f4f4;
+            text-align: left;
+            margin: 0;
+            padding-left: 10px;
+            margin-top: 10px; /* Add margin for spacing between labels */
+        }
+
+        select, input[type="date"] {
+            font-family: Montserrat, sans-serif;
+            padding: 10px;
+            margin: 5px 0; /* Adjust margin for better spacing */
+            width: auto;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        button {
+            font-family: Montserrat, sans-serif;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f4f4f4;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<form id="clientsInRoomForm">
+    <label for="room">Room:</label>
+    <select name="room" id="room" required>
+        {% for room in rooms %}
+            <option value="{{ room.number }}">{{ room.number }} {{ room.category }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        const roomNumber = document.getElementById("room").value;
+        const startDate = document.getElementById("startDate").value;
+        const endDate = document.getElementById("endDate").value;
+
+        const url = `/hotel/clients_in_room/${roomNumber}/${startDate}/${endDate}`;
+        window.location.href = url;
+    }
+</script>
+
+</body>
