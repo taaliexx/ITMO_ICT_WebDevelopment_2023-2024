@@ -137,7 +137,17 @@ def all_bookings(request):
         bookings = Bookings.objects.all()
         serializer = BookingSerializer(bookings, many=True)
         return JsonResponse(serializer.data, safe=False)
+
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = BookingSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
+
     return JsonResponse({'error': 'Invalid request method'}, status=400)
+
 
 @csrf_exempt
 @require_http_methods(["PATCH"])
@@ -154,9 +164,44 @@ def update_check_in_out(request, booking_id):
 
         booking.save()
 
-        # Возвращаем обновленные данные
         serializer = BookingSerializer(booking)
         return JsonResponse(serializer.data)
 
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=400)
+
+
+@csrf_exempt
+def users(request):
+    if request.method == 'GET':
+        users = User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = UserSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
+
+
+@csrf_exempt
+def check_booking_conflict(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        room = data.get('room')
+        check_in = datetime.strptime(data.get('check_in'), '%Y-%m-%d').date()
+        check_out = datetime.strptime(data.get('check_out'), '%Y-%m-%d').date()
+
+        conflicting_bookings = Bookings.objects.filter(
+            room=room,
+            check_in__lt=check_out,
+            check_out__gt=check_in
+        )
+
+        conflict = conflicting_bookings.exists()
+
+        return JsonResponse({'conflict': conflict})
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=400)

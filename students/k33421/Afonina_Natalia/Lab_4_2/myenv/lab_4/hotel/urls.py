@@ -14,5 +14,8 @@ urlpatterns = [
     path('all_bookings/<int:booking_id>/', views.update_check_in_out),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('users/', views.users),
+    path('check_booking_conflict/', views.check_booking_conflict),
+
 
 ]

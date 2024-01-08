@@ -9,8 +9,8 @@ import QuarterlyReport from './components/QuarterlyReport.vue';
 import BookingsList from './components/BookingsList.vue';
 import LoginView from './components/LoginView.vue';
 
-import Vuetify from 'vuetify';  // Добавьте эту строку
-import 'vuetify/dist/vuetify.min.css';  // И эту строку для подключения стилей
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
 
 const app = createApp(App);
@@ -37,7 +37,7 @@ router.beforeEach((to, from, next) => {
     alert('Please login');
     next('/');
   } else {
-    // В противном случае продолжите нормальное выполнение навигации
+    // В противном случае нормальное выполнение навигации
     next();
   }
 });
